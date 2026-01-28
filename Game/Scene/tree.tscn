@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1u5huf1rw46x"]
+
+[ext_resource type="Texture2D" uid="uid://b5w7up6n5eo35" path="res://Assets/Asset/Level/TreeAndGrass.png" id="1_xeqp7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xeqp7"]
+size = Vector2(14, 6.5)
+
+[node name="Tree" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="TreeAndGrass" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+texture = ExtResource("1_xeqp7")
+offset = Vector2(0, -40)
+region_enabled = true
+region_rect = Rect2(48, 0, 64, 96)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xeqp7")
