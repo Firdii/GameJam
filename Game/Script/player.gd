@@ -1,10 +1,8 @@
 extends BaseCharacter
 
+func _ready() -> void:
+	pass
 
-
-
-func _unhandled_input(_event: InputEvent) -> void:
+func _process(_delta: float) -> void:
+	
 	inputDirection = Input.get_vector("Left", "Right", "Up", "Down")
-
-	
-	

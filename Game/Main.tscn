@@ -361,6 +361,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="Level" instance=ExtResource("2_lv82p")]
 position = Vector2(580, 300)
+showDebugVisual = false
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Level"]
 visible = false

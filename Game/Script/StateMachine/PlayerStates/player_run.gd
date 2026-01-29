@@ -1,6 +1,6 @@
 extends State
 
-const SPEED = 150
+const SPEED = 120
 const ACCELERATE = 5
 
 func UpdatePhysics(delta: float):

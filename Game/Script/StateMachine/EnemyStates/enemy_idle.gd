@@ -3,7 +3,6 @@ extends State
 var playerDetectionRadius = 100
 @onready var polygon_2d: Polygon2D = $"../../Polygon2D"
 
-
 func Enter():
 	super.Enter()
 	

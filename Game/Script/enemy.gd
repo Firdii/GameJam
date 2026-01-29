@@ -1,6 +1,5 @@
 extends BaseCharacter
 
-
 @onready var line_2d: Line2D = $Line2D
 var player : BaseCharacter
 var playerDirection: Vector2
@@ -8,7 +7,6 @@ var playerAngle: float
 
 func _ready() -> void:
 	player = get_tree().root.get_node("SceneRoot/Level/Player")
-	
 	
 func _process(_delta: float) -> void:
 	playerDirection = player.global_position - global_position

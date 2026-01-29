@@ -4,16 +4,11 @@ class_name State
 var parentStateMachine : StateMachine
 var character : BaseCharacter
 
-
-
-func UpdatePhysics(delta: float):
+func UpdatePhysics(_delta: float):
 	pass
 
-
 func Update():
-	
 	pass 
-
 
 func Enter():
 	pass
