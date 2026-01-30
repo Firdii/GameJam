@@ -54,14 +54,12 @@ func Update():
 		next_attack_pressed = true
 		
 	if attackCollisionShape:
-		# Aktifkan hitbox cuma di frame tertentu (frame 2 sampai 5)
 		if character.animated_sprite_2d.frame == 2:
 			attackCollisionShape.disabled = false
 		elif character.animated_sprite_2d.frame == 5:
 			attackCollisionShape.disabled = true
 
 func _on_animation_finished():
-	# Kalau player pencet attack lagi sebelum animasinya kelar, lanjut ke hit berikutnya
 	if next_attack_pressed and combo_count < max_combo:
 		combo_count += 1
 		Enter() 
@@ -75,11 +73,9 @@ func finish_attack():
 	if attackCollisionShape:
 		attackCollisionShape.disabled = true
 	
-	# Putus koneksi signal biar gak kepanggil berkali-kali nanti
 	if character.animated_sprite_2d.animation_finished.is_connected(_on_animation_finished):
 		character.animated_sprite_2d.animation_finished.disconnect(_on_animation_finished)
 	
-	# Balik ke State Idle atau Run
 	if character.inputDirection != Vector2.ZERO:
 		parentStateMachine.SwitchTo("Run")
 	else:
@@ -94,13 +90,11 @@ func Exit():
 		character.animated_sprite_2d.animation_finished.disconnect(_on_animation_finished)
 
 func Ready():
-	# Matiin semua hitbox pas awal game jalan
 	if attack_hit_box:
 		for child in attack_hit_box.get_children():
 			if child is CollisionShape2D:
 				child.disabled = true
 
 func _on_attack_hit_box_area_entered(area: Area2D) -> void:
-	# Kasih damage kalau kena musuh
 	if area.get_parent().has_method("GetHit"):
-		area.get_parent().GetHit(character.attackDamage)
+		area.get_parent().GetHit(character.attackDamage, character.global_position)

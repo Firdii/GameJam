@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ditt7ebdj0n1l"]
+[gd_scene load_steps=133 format=3 uid="uid://ditt7ebdj0n1l"]
 
 [ext_resource type="Script" uid="uid://d6m432ngniaf" path="res://Game/Script/enemy.gd" id="1_w6u1f"]
 [ext_resource type="Shader" uid="uid://c5pfbf5yvkwm4" path="res://Game/Shader/character.tres" id="2_o7bdx"]
@@ -917,59 +917,59 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6u1f"]
 radius = 8.062258
 
-[node name="Enemy" type="CharacterBody2D" unique_id=1395548713]
+[node name="Enemy" type="CharacterBody2D"]
 collision_layer = 3
 script = ExtResource("1_w6u1f")
 showDebugVisual = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=767238728]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_s7hed")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=146860304]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_bqbao")
 position = Vector2(0, 6)
 sprite_frames = SubResource("SpriteFrames_axp76")
 animation = &"Die_Down"
 offset = Vector2(0, -8)
 
-[node name="StateMachine" type="Node" parent="." unique_id=1016593836]
+[node name="StateMachine" type="Node" parent="."]
 script = ExtResource("4_o7bdx")
 
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1754353378]
+[node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource("5_o7bdx")
 
-[node name="Move" type="Node" parent="StateMachine" unique_id=671429636]
+[node name="Move" type="Node" parent="StateMachine"]
 script = ExtResource("6_bqbao")
 
-[node name="Hurt" type="Node" parent="StateMachine" unique_id=1450302336]
+[node name="Hurt" type="Node" parent="StateMachine"]
 script = ExtResource("7_qourr")
 
-[node name="Die" type="Node" parent="StateMachine" unique_id=1933393210]
+[node name="Die" type="Node" parent="StateMachine"]
 script = ExtResource("8_8n67n")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1189855854]
+[node name="Line2D" type="Line2D" parent="."]
 z_index = 100
 points = PackedVector2Array(0, 0, 20, 20)
 width = 1.0
 default_color = Color(0.05882353, 1, 1, 1)
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1137490543]
+[node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.19215687, 1, 1, 0.09803922)
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1758466407]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
 radius = 40.0
 max_speed = 20.0
 
-[node name="Area2D_Body" type="Area2D" parent="." unique_id=1941187877]
+[node name="Area2D_Body" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Body" unique_id=2136731261]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Body"]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_w6u1f")
 
-[node name="SfxHurt" type="AudioStreamPlayer2D" parent="." unique_id=113910680]
+[node name="SfxHurt" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_gnqxg")
 bus = &"Sound"
 
