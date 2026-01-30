@@ -980,10 +980,10 @@ animations = [{
 script = ExtResource("1_s7hed")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8t7s"]
-size = Vector2(37, 22)
+size = Vector2(37, 11.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dh3wh"]
-size = Vector2(26, 21.5)
+size = Vector2(24, 21.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=1297455864]
 script = ExtResource("1_s7hed")
@@ -996,9 +996,7 @@ shape = SubResource("CircleShape2D_s7hed")
 position = Vector2(0, 5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lredk")
-animation = &"Attack1_Down"
-frame = 6
-frame_progress = 1.0
+animation = &"Attack2_Up"
 offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=255926904]
@@ -1025,19 +1023,19 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D_Down" type="CollisionShape2D" parent="AttackHitBox" unique_id=1822512929]
-position = Vector2(0, 2)
+position = Vector2(0, 7.125)
 shape = SubResource("RectangleShape2D_o8t7s")
 
 [node name="CollisionShape2D_Up" type="CollisionShape2D" parent="AttackHitBox" unique_id=2072848411]
-position = Vector2(0, -13)
+position = Vector2(0, -20)
 shape = SubResource("RectangleShape2D_o8t7s")
 
 [node name="CollisionShape2D_Right" type="CollisionShape2D" parent="AttackHitBox" unique_id=841335630]
-position = Vector2(15, -7.5)
+position = Vector2(15, -8)
 shape = SubResource("RectangleShape2D_dh3wh")
 
 [node name="CollisionShape2D_Left" type="CollisionShape2D" parent="AttackHitBox" unique_id=1565575593]
-position = Vector2(-14, -8)
+position = Vector2(-16, -8)
 shape = SubResource("RectangleShape2D_dh3wh")
 
 [node name="SfxSlash1" type="AudioStreamPlayer2D" parent="." unique_id=819685225]
