@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://vppfvmpkd346" path="res://Assets/Tilesets/plains.png" id="3_rl4yr"]
 [ext_resource type="PackedScene" uid="uid://ditt7ebdj0n1l" path="res://Game/Scene/enemy.tscn" id="5_rl4yr"]
 [ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree.tscn" id="6_g5pn2"]
-[ext_resource type="AudioStream" uid="uid://c1f22da6qtsu2" path="res://Assets/Music/Nujabes_-_Lady_Brown_Instrumental_(mp3.pm).mp3" id="7_haytw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_wd0a0")
@@ -443,8 +442,3 @@ shape = SubResource("RectangleShape2D_haytw")
 visible = false
 position = Vector2(572, 627)
 shape = SubResource("RectangleShape2D_haytw")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1450896171]
-stream = ExtResource("7_haytw")
-autoplay = true
-bus = &"Music"

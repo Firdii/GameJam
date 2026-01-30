@@ -1,4 +1,4 @@
-[gd_scene load_steps=150 format=3 uid="uid://4sulc47mnpoe"]
+[gd_scene format=3 uid="uid://4sulc47mnpoe"]
 
 [ext_resource type="Script" uid="uid://wm87gt06rgn4" path="res://Game/Script/player.gd" id="1_s7hed"]
 [ext_resource type="Texture2D" uid="uid://cb8cia3q2ux1p" path="res://Assets/Asset/FREE_Adventurer 2D Pixel Art/Sprites/ATTACK 1/attack1_down.png" id="2_lredk"]
@@ -21,6 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://c12cocplw8bx1" path="res://Assets/Asset/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_left.png" id="15_trcvi"]
 [ext_resource type="Texture2D" uid="uid://bw7e1llgtgvjg" path="res://Assets/Asset/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_right.png" id="16_ik5lm"]
 [ext_resource type="Texture2D" uid="uid://cqyjjhqy7lwhb" path="res://Assets/Asset/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="17_ll2go"]
+[ext_resource type="AudioStream" uid="uid://yvep5ilrnhcg" path="res://Assets/Sounds/Slash1.wav" id="22_ik5lm"]
+[ext_resource type="AudioStream" uid="uid://cw4r8sf801tq3" path="res://Assets/Sounds/Slash2.wav" id="23_ll2go"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7hed"]
 radius = 5.0
@@ -983,14 +985,14 @@ size = Vector2(37, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dh3wh"]
 size = Vector2(26, 21.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=1297455864]
 script = ExtResource("1_s7hed")
 showDebugVisual = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1666067908]
 shape = SubResource("CircleShape2D_s7hed")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=108089657]
 position = Vector2(0, 5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lredk")
@@ -999,43 +1001,51 @@ frame = 6
 frame_progress = 1.0
 offset = Vector2(0, -20)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=255926904]
 zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
 limit_right = 1150
 limit_bottom = 660
 
-[node name="StateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." unique_id=1165139449]
 script = ExtResource("4_b8828")
 
-[node name="Idle" type="Node" parent="StateMachine"]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1825033894]
 script = ExtResource("5_y4sok")
 
-[node name="Run" type="Node" parent="StateMachine"]
+[node name="Run" type="Node" parent="StateMachine" unique_id=334359379]
 script = ExtResource("6_4ujyx")
 
-[node name="Attack" type="Node" parent="StateMachine"]
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1929620567]
 script = ExtResource("7_4ujyx")
 
-[node name="AttackHitBox" type="Area2D" parent="."]
+[node name="AttackHitBox" type="Area2D" parent="." unique_id=160162885]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D_Down" type="CollisionShape2D" parent="AttackHitBox"]
+[node name="CollisionShape2D_Down" type="CollisionShape2D" parent="AttackHitBox" unique_id=1822512929]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_o8t7s")
 
-[node name="CollisionShape2D_Up" type="CollisionShape2D" parent="AttackHitBox"]
+[node name="CollisionShape2D_Up" type="CollisionShape2D" parent="AttackHitBox" unique_id=2072848411]
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_o8t7s")
 
-[node name="CollisionShape2D_Right" type="CollisionShape2D" parent="AttackHitBox"]
+[node name="CollisionShape2D_Right" type="CollisionShape2D" parent="AttackHitBox" unique_id=841335630]
 position = Vector2(15, -7.5)
 shape = SubResource("RectangleShape2D_dh3wh")
 
-[node name="CollisionShape2D_Left" type="CollisionShape2D" parent="AttackHitBox"]
+[node name="CollisionShape2D_Left" type="CollisionShape2D" parent="AttackHitBox" unique_id=1565575593]
 position = Vector2(-14, -8)
 shape = SubResource("RectangleShape2D_dh3wh")
+
+[node name="SfxSlash1" type="AudioStreamPlayer2D" parent="." unique_id=819685225]
+stream = ExtResource("22_ik5lm")
+bus = &"Sound"
+
+[node name="SfxSlash2" type="AudioStreamPlayer2D" parent="." unique_id=1091532417]
+stream = ExtResource("23_ll2go")
+bus = &"Sound"
 
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]

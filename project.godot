@@ -19,6 +19,10 @@ run/main_scene="uid://dgdlubqj2cexv"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Music="*uid://ba0ta1uujqppn"
+
 [input]
 
 Up={
