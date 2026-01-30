@@ -8,7 +8,8 @@ class_name BaseCharacter
 		if currentHealth == 0:
 			isDead = true
 var isDead = false
-@export var attackDamage = 50
+@export var attackDamage = 25
+
 
 var inputDirection: Vector2 = Vector2.ZERO
 var facingDirection: String = "Down"
@@ -46,9 +47,18 @@ func GetHit(damage: int):
 	if isDead:
 		return
 		
+	StartBlink()
 	currentHealth -= damage
 	
 	if isDead:
 		state_machine.SwitchTo("Die")
 	else:
 		state_machine.SwitchTo("Hurt")
+
+
+func UpdateBlink(newValue: float):
+	animated_sprite_2d.set_instance_shader_parameter("Blink", newValue)
+	
+func StartBlink():
+	var blink_tween = get_tree().create_tween()
+	blink_tween.tween_method(UpdateBlink, 1.0, 0.0, 0.3)

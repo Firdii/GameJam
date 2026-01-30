@@ -16,12 +16,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="GameJamPalembang"
 run/main_scene="uid://dgdlubqj2cexv"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Music="*uid://ba0ta1uujqppn"
+Music="*res://Game/Scene/music.tscn"
 
 [input]
 
