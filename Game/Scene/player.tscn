@@ -996,7 +996,7 @@ shape = SubResource("CircleShape2D_s7hed")
 position = Vector2(0, 5)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lredk")
-animation = &"Attack2_Up"
+animation = &"Attack1_Down"
 offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=255926904]

@@ -15,13 +15,17 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="GameJamPalembang"
-run/main_scene="uid://dgdlubqj2cexv"
-config/features=PackedStringArray("4.5", "Mobile")
+run/main_scene="uid://docmgsbvo3cpu"
+config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://wxgvavdghjhq"
 
 [autoload]
 
-Music="*res://Game/Scene/music.tscn"
+Music="*uid://ba0ta1uujqppn"
 
 [input]
 
