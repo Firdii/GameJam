@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://docmgsbvo3cpu"]
 
 [ext_resource type="Script" uid="uid://pq3ptpkl4hda" path="res://Game/Scene/main_menu.gd" id="1_eud1g"]
-[ext_resource type="Texture2D" uid="uid://di0dguvln0m62" path="res://Assets/MainMenuBG/forestBackground/4.png" id="1_f5rts"]
 [ext_resource type="FontFile" uid="uid://b3kivjbgy1pyv" path="res://Assets/Font/KiwiSoda.ttf" id="2_eud1g"]
+[ext_resource type="Texture2D" uid="uid://b7wqhsmdr5mv7" path="res://Assets/MainMenuBG/Background layers/Layer_0011_0.png" id="3_tev8b"]
+[ext_resource type="Script" uid="uid://dli2o05qmasjx" path="res://Game/Scene/parallax_background.gd" id="3_xox3y"]
 [ext_resource type="AudioStream" uid="uid://fblauue74feg" path="res://Assets/Music/MainMenuIMPRINT.wav" id="4_muoms"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muoms"]
-texture = ExtResource("1_f5rts")
-modulate_color = Color(0.641934, 0.64193404, 0.64193386, 1)
+[ext_resource type="Texture2D" uid="uid://b2nvt4g15x75b" path="res://Assets/MainMenuBG/Background layers/Layer_0010_1.png" id="4_xox3y"]
+[ext_resource type="Texture2D" uid="uid://cc2k16ijs1gsj" path="res://Assets/MainMenuBG/Background layers/Layer_0009_2.png" id="5_veekw"]
+[ext_resource type="Texture2D" uid="uid://c4bponsk7j4fh" path="res://Assets/MainMenuBG/Background layers/Layer_0008_3.png" id="6_3tm85"]
+[ext_resource type="Texture2D" uid="uid://ub2jlrlltyck" path="res://Assets/MainMenuBG/Background layers/Layer_0007_Lights.png" id="7_mj4xf"]
+[ext_resource type="Texture2D" uid="uid://dwon83dhph33x" path="res://Assets/MainMenuBG/Background layers/Layer_0006_4.png" id="8_114jl"]
+[ext_resource type="Texture2D" uid="uid://rw11ggx5r8n0" path="res://Assets/MainMenuBG/Background layers/Layer_0005_5.png" id="9_xflx7"]
+[ext_resource type="Texture2D" uid="uid://din1cgfcea5xk" path="res://Assets/MainMenuBG/Background layers/Layer_0004_Lights.png" id="10_gjvc1"]
+[ext_resource type="Texture2D" uid="uid://dftfi3qjgqbnx" path="res://Assets/MainMenuBG/Background layers/Layer_0003_6.png" id="11_4n3nk"]
+[ext_resource type="Texture2D" uid="uid://d0o5yyi16shq2" path="res://Assets/MainMenuBG/Background layers/Layer_0002_7.png" id="12_5uhu2"]
+[ext_resource type="Texture2D" uid="uid://bbndudcbhawct" path="res://Assets/MainMenuBG/Background layers/Layer_0001_8.png" id="13_4f8s3"]
+[ext_resource type="Texture2D" uid="uid://ccx7uosbk7nc5" path="res://Assets/MainMenuBG/Background layers/Layer_0000_9.png" id="14_0aj0p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5rts"]
 bg_color = Color(1, 1, 1, 1)
@@ -50,14 +58,139 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eud1g")
 
-[node name="Panel" type="Panel" parent="." unique_id=1245872393]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_muoms")
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=477182720]
+script = ExtResource("3_xox3y")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=362415606]
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=505040731]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("3_tev8b")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1756778074]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1152518957]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("4_xox3y")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1384467438]
+motion_scale = Vector2(0.15, 0.15)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=907554119]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("5_veekw")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=881766354]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=688283493]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("6_3tm85")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=479129082]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1752502816]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("7_mj4xf")
+centered = false
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1608967961]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6" unique_id=783644168]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("8_114jl")
+centered = false
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground" unique_id=779936377]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7" unique_id=767601176]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("9_xflx7")
+centered = false
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1554054214]
+motion_scale = Vector2(0.65, 0.65)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8" unique_id=715011219]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("10_gjvc1")
+centered = false
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1291149930]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9" unique_id=22116950]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("11_4n3nk")
+centered = false
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground" unique_id=265620351]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10" unique_id=1301386001]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("12_5uhu2")
+centered = false
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground" unique_id=204142620]
+motion_scale = Vector2(0.95, 0.95)
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer11" unique_id=2040943810]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("13_4f8s3")
+centered = false
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground" unique_id=744107787]
+motion_mirroring = Vector2(937.28, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer12" unique_id=2015552198]
+texture_filter = 1
+texture_repeat = 2
+scale = Vector2(1.01, 1.01)
+texture = ExtResource("14_0aj0p")
+centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1844813026]
 layout_mode = 1
@@ -67,9 +200,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -196.5
-offset_top = -39.0
+offset_top = -66.0
 offset_right = 196.5
-offset_bottom = 176.75
+offset_bottom = 149.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
@@ -123,10 +256,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -261.25
-offset_top = -185.0
-offset_right = 261.25
-offset_bottom = -83.0
+offset_left = -255.0
+offset_top = -233.0
+offset_right = 267.5
+offset_bottom = -131.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_eud1g")
