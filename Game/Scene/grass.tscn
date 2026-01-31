@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://uogvweqj1it0"]
+
+[ext_resource type="Texture2D" uid="uid://b5w7up6n5eo35" path="res://Assets/Asset/Level/TreeAndGrass.png" id="1_40eul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq7dl"]
+
+[node name="Area2D" type="Area2D" unique_id=1049557676]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1911475500]
+shape = SubResource("RectangleShape2D_bq7dl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=317864991]
+y_sort_enabled = true
+position = Vector2(-1.1026859e-06, -0.49999994)
+scale = Vector2(0.7083333, 0.65625)
+texture = ExtResource("1_40eul")
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 32)
