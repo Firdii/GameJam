@@ -905,5 +905,5 @@ shape = SubResource("RectangleShape2D_g5pn2")
 position = Vector2(572, 645.375)
 shape = SubResource("RectangleShape2D_haytw")
 
-[node name="Area2D" parent="Level" unique_id=1049557676 instance=ExtResource("6_f30c1")]
-position = Vector2(530, 553)
+[node name="Grass" parent="." unique_id=1049557676 instance=ExtResource("6_f30c1")]
+position = Vector2(558, 575)
