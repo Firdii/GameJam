@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://docmgsbvo3cpu"]
 
 [ext_resource type="Script" uid="uid://pq3ptpkl4hda" path="res://Game/Scene/main_menu.gd" id="1_eud1g"]
-[ext_resource type="FontFile" uid="uid://b3kivjbgy1pyv" path="res://Assets/Font/KiwiSoda.ttf" id="2_eud1g"]
 [ext_resource type="Texture2D" uid="uid://b7wqhsmdr5mv7" path="res://Assets/MainMenuBG/Background layers/Layer_0011_0.png" id="3_tev8b"]
 [ext_resource type="Script" uid="uid://dli2o05qmasjx" path="res://Game/Scene/parallax_background.gd" id="3_xox3y"]
 [ext_resource type="AudioStream" uid="uid://fblauue74feg" path="res://Assets/Music/MainMenuIMPRINT.wav" id="4_muoms"]
@@ -16,38 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://d0o5yyi16shq2" path="res://Assets/MainMenuBG/Background layers/Layer_0002_7.png" id="12_5uhu2"]
 [ext_resource type="Texture2D" uid="uid://bbndudcbhawct" path="res://Assets/MainMenuBG/Background layers/Layer_0001_8.png" id="13_4f8s3"]
 [ext_resource type="Texture2D" uid="uid://ccx7uosbk7nc5" path="res://Assets/MainMenuBG/Background layers/Layer_0000_9.png" id="14_0aj0p"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5rts"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eud1g"]
-bg_color = Color(0.6255971, 0.6255971, 0.6255971, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ewep"]
-bg_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
-shadow_color = Color(0, 0, 0, 0.20392157)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f5rts"]
+[ext_resource type="Texture2D" uid="uid://bks7bayibqeln" path="res://Assets/MainMenuBG/start button-44ab.png" id="15_xflx7"]
+[ext_resource type="Texture2D" uid="uid://leki4yjn1x7y" path="res://Assets/MainMenuBG/start button-44af.png" id="16_gjvc1"]
+[ext_resource type="Texture2D" uid="uid://bjfukkbbg38ml" path="res://Assets/MainMenuBG/option button-44b1.png" id="17_4n3nk"]
+[ext_resource type="Texture2D" uid="uid://bf1gdpubtlodk" path="res://Assets/MainMenuBG/option button-44c7.png" id="18_5uhu2"]
+[ext_resource type="Texture2D" uid="uid://dcrue7gjs2fhe" path="res://Assets/MainMenuBG/exit-44ca.png" id="19_4f8s3"]
+[ext_resource type="Texture2D" uid="uid://dp1bvxvuihtlt" path="res://Assets/MainMenuBG/exit-44cc.png" id="20_0aj0p"]
+[ext_resource type="Texture2D" uid="uid://b4jyr3xjj0bcc" path="res://Assets/MainMenuBG/logo.png" id="21_xflx7"]
 
 [node name="MainMenu" type="Control" unique_id=986878433]
 layout_mode = 3
@@ -212,57 +186,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -196.5
-offset_top = -76.0
-offset_right = 196.5
-offset_bottom = 139.75
+offset_left = -250.0
+offset_top = -61.0
+offset_right = 250.0
+offset_bottom = 195.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 8
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1744534578]
+[node name="Button" type="TextureButton" parent="VBoxContainer" unique_id=1596749806]
+custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_f5rts")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_eud1g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6ewep")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_f5rts")
-text = "Start Game"
+texture_normal = ExtResource("15_xflx7")
+texture_pressed = ExtResource("15_xflx7")
+texture_hover = ExtResource("16_gjvc1")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1784760313]
+[node name="Button2" type="TextureButton" parent="VBoxContainer" unique_id=1725251674]
+custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_f5rts")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_eud1g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6ewep")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_f5rts")
-text = "Options"
+texture_normal = ExtResource("17_4n3nk")
+texture_pressed = ExtResource("17_4n3nk")
+texture_hover = ExtResource("18_5uhu2")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=984418989]
+[node name="Button3" type="TextureButton" parent="VBoxContainer" unique_id=860920612]
+custom_minimum_size = Vector2(500, 80)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_f5rts")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_eud1g")
-theme_override_styles/hover = SubResource("StyleBoxFlat_6ewep")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_f5rts")
-text = "Exit"
+texture_normal = ExtResource("19_4f8s3")
+texture_pressed = ExtResource("19_4f8s3")
+texture_hover = ExtResource("20_0aj0p")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="." unique_id=1187462918]
+[node name="Label" type="TextureRect" parent="." unique_id=371632226]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -270,16 +233,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -261.25
-offset_top = -238.0
+offset_top = -281.0
 offset_right = 261.25
-offset_bottom = -136.0
+offset_bottom = -81.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_eud1g")
-theme_override_font_sizes/font_size = 101
-text = "IMPRINT"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("21_xflx7")
+stretch_mode = 5
 
 [node name="BgmMenu" type="AudioStreamPlayer2D" parent="." unique_id=74543952]
 stream = ExtResource("4_muoms")

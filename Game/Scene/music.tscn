@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://ba0ta1uujqppn"]
-
-[ext_resource type="AudioStream" uid="uid://bcyfy1mhn1dd4" path="res://Assets/Music/Chill bgm.wav" id="1_sff0d"]
-
-[node name="Music" type="AudioStreamPlayer2D" unique_id=1842049863]
-stream = ExtResource("1_sff0d")
-autoplay = true
-bus = &"Music"

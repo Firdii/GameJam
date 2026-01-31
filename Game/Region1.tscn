@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="7_253iu"]
 [ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="8_15flv"]
 [ext_resource type="PackedScene" uid="uid://bw5si1hfbsdq4" path="res://Game/Scene/tree4.tscn" id="9_mo7t1"]
+[ext_resource type="AudioStream" uid="uid://bcyfy1mhn1dd4" path="res://Assets/Music/Chill bgm.wav" id="11_0mfvo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_f30c1")
@@ -1469,5 +1470,10 @@ shape = SubResource("RectangleShape2D_g5pn2")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1911139473]
 position = Vector2(572, 645.375)
 shape = SubResource("RectangleShape2D_haytw")
+
+[node name="MusicRegion1" type="AudioStreamPlayer2D" parent="." unique_id=522495116]
+stream = ExtResource("11_0mfvo")
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="ExitZone" to="." method="_on_exit_zone_body_entered"]

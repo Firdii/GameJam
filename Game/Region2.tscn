@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="9_5wytv"]
 [ext_resource type="PackedScene" uid="uid://bw5si1hfbsdq4" path="res://Game/Scene/tree4.tscn" id="10_j0psq"]
 [ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="11_bjfhs"]
+[ext_resource type="AudioStream" uid="uid://cn04wlosaskjm" path="res://Assets/Music/Region3OST.wav" id="12_5wytv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_awdd5")
@@ -1082,6 +1083,11 @@ shape = SubResource("RectangleShape2D_h8arp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitTo3" unique_id=1011153124]
 position = Vector2(578.5, 8)
 shape = SubResource("RectangleShape2D_1fy47")
+
+[node name="MusicRegion2" type="AudioStreamPlayer2D" parent="." unique_id=437647619]
+stream = ExtResource("12_5wytv")
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="ExitTo1" to="." method="_on_exit_to_1_body_entered"]
 [connection signal="body_entered" from="ExitTo3" to="." method="_on_exit_to_3_body_entered"]

@@ -23,13 +23,13 @@
 [ext_resource type="Texture2D" uid="uid://cj0kvns6loid4" path="res://Assets/Asset/RUN/run up revs.png" id="16_74ont"]
 [ext_resource type="Texture2D" uid="uid://cjsho620lcfa4" path="res://Assets/Characters/Slime3/Run/run side right revs.png" id="17_dhvl4"]
 [ext_resource type="AudioStream" uid="uid://yvep5ilrnhcg" path="res://Assets/Sounds/Slash1.wav" id="22_ik5lm"]
-[ext_resource type="Script" uid="uid://cl3phmxjrwfew" path="res://Game/Script/StateMachine/PlayerStates/player_hurt.gd" id="23_dhvl4"]
+[ext_resource type="Script" path="res://Game/Script/StateMachine/PlayerStates/player_hurt.gd" id="23_dhvl4"]
 [ext_resource type="AudioStream" uid="uid://cw4r8sf801tq3" path="res://Assets/Sounds/Slash2.wav" id="23_ll2go"]
 [ext_resource type="AudioStream" uid="uid://cnckwubehjb6s" path="res://Assets/Sounds/HurtPlayer.wav" id="24_ll2go"]
-[ext_resource type="Script" uid="uid://dhjpa6bh7l173" path="res://Game/Script/StateMachine/PlayerStates/player_die.gd" id="24_ps8j8"]
+[ext_resource type="Script" path="res://Game/Script/StateMachine/PlayerStates/player_die.gd" id="24_ps8j8"]
 [ext_resource type="Script" uid="uid://bmd04aj2vhxtk" path="res://Game/Scene/h_box_container.gd" id="25_jp00q"]
-[ext_resource type="Texture2D" uid="uid://brctfvppbhh7r" path="res://Assets/Characters/Slime3/Walk/Mask (1).png" id="26_g38ay"]
 [ext_resource type="PackedScene" uid="uid://cgc37jirvfotq" path="res://Game/Scene/heart_gui.tscn" id="26_vaw4t"]
+[ext_resource type="Texture2D" uid="uid://bp4ogmrguuhds" path="res://Assets/Characters/MaskOG.png" id="29_ps8j8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7hed"]
 radius = 3.0
@@ -1390,7 +1390,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Die_Down",
-"speed": 20.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1494,7 +1494,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Die_Left",
-"speed": 20.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1598,7 +1598,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Die_Right",
-"speed": 20.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1702,7 +1702,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Die_Up",
-"speed": 20.0
+"speed": 13.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2047,8 +2047,7 @@ shape = SubResource("CircleShape2D_s7hed")
 position = Vector2(0, 3)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_4ujyx")
-animation = &"Run_Right"
-frame_progress = 0.767931
+animation = &"Die_Up"
 offset = Vector2(0, -20)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=255926904]
@@ -2128,17 +2127,22 @@ theme_override_constants/separation = 20
 script = ExtResource("25_jp00q")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=188980433]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
-texture = ExtResource("26_g38ay")
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("29_ps8j8")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="heart_gui" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=1692714266 instance=ExtResource("26_vaw4t")]
-position = Vector2(2, -2)
+position = Vector2(85, 19)
 
 [node name="heart_gui2" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=1760242917 instance=ExtResource("26_vaw4t")]
-position = Vector2(58, -2)
+position = Vector2(141, 19)
 
 [node name="heart_gui3" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=896038989 instance=ExtResource("26_vaw4t")]
-position = Vector2(115, -2)
+position = Vector2(198, 19)
 
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]
 [connection signal="area_entered" from="SurfaceDetector" to="." method="_on_surface_detector_area_entered"]
