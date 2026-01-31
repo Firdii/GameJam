@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://cojp5xhudh4l8" path="res://Assets/Asset/Level/Background_Grass.png" id="3_qk0bd"]
 [ext_resource type="Texture2D" uid="uid://b88flopivhuk0" path="res://Assets/Asset/Level/Tilemap_Platform.png" id="4_mrtni"]
 [ext_resource type="PackedScene" uid="uid://4sulc47mnpoe" path="res://Game/Scene/player.tscn" id="5_206xx"]
-[ext_resource type="PackedScene" uid="uid://s2j8ms2lg42o" path="res://Game/grass_spawner.tscn" id="5_f30c1"]
 [ext_resource type="PackedScene" uid="uid://duhuyhkouif18" path="res://Game/Scene/tree1.tscn" id="6_0mfvo"]
 [ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="7_253iu"]
 [ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="8_15flv"]
@@ -1442,10 +1441,6 @@ position = Vector2(729, 291)
 
 [node name="Tree87" parent="Level/TreeGroup" unique_id=1465904029 instance=ExtResource("8_15flv")]
 position = Vector2(735, 140)
-
-[node name="GrassSpawner" parent="Level" unique_id=693333723 instance=ExtResource("5_f30c1")]
-position = Vector2(10, 5)
-amount = 150
 
 [node name="Player" parent="Level" unique_id=2104936495 instance=ExtResource("5_206xx")]
 position = Vector2(579, 581)

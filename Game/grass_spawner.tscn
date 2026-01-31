@@ -9,7 +9,8 @@ script = ExtResource("1_0f8ju")
 grass_scene = ExtResource("2_636ka")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=333786870]
-offset_left = 480.0
-offset_right = 663.0
-offset_bottom = 647.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 648.0
 border_color = Color(0.32557127, 0.62307626, 0, 1)

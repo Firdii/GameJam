@@ -6,7 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cojp5xhudh4l8" path="res://Assets/Asset/Level/Background_Grass.png" id="3_hv1oq"]
 [ext_resource type="Texture2D" uid="uid://b88flopivhuk0" path="res://Assets/Asset/Level/Tilemap_Platform.png" id="4_qff0p"]
 [ext_resource type="PackedScene" uid="uid://4sulc47mnpoe" path="res://Game/Scene/player.tscn" id="5_fpqh1"]
-[ext_resource type="PackedScene" uid="uid://ditt7ebdj0n1l" path="res://Game/Scene/enemy.tscn" id="6_00grs"]
+[ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="7_00grs"]
+[ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="8_ip2q2"]
+[ext_resource type="PackedScene" uid="uid://duhuyhkouif18" path="res://Game/Scene/tree1.tscn" id="9_7umsv"]
+[ext_resource type="PackedScene" uid="uid://bw5si1hfbsdq4" path="res://Game/Scene/tree4.tscn" id="10_al6sl"]
+[ext_resource type="PackedScene" uid="uid://df5opvbs0w5g0" path="res://Game/Scene/tree.tscn" id="11_tfqyp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_8eaxq")
@@ -775,6 +779,7 @@ tile_map_data = PackedByteArray("AAACAAIAAgACAAcAAAACAAMAAgACAAgAAAADAAMAAgADAAg
 tile_set = SubResource("TileSet_w1egk")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=770101485]
+tile_map_data = PackedByteArray("AAAcAA8AAQALAAMAAAAcAA4AAQALAAIAAAAcAA0AAQALAAIAAAAcAAwAAQALAAIAAAAcAAsAAQALAAIAAAAcAAoAAQAHAAEAAAAcAAkAAQAAAAEAAAAcAAgAAQAAAAEAAAAcAAcAAQAHAAIAAAAcAAYAAQALAAAAAAAcAAQAAQALAAMAAAAcAAMAAQALAAIAAAAcAAIAAQALAAAAAAAbAA8AAQAIAAMAAAAbAA4AAQAIAAEAAAAbAA0AAQAFAAIAAAAbAAwAAQAFAAEAAAAbAAsAAQAIAAEAAAAbAAoAAQAFAAAAAAAbAAcAAQAJAAMAAAAbAAYAAQAKAAAAAAAbAAQAAQAJAAMAAAAbAAMAAQANAAEAAAAbAAIAAQAKAAAAAAAaAA0AAQAJAAMAAAAaAAwAAQAKAAAAAAAaAAoAAQAGAAMAAAAaAAkAAQALAAIAAAAaAAgAAQALAAIAAAAaAAcAAQAJAAEAAAAaAAYAAQAEAAEAAAAaAAUAAQAAAAEAAAAaAAQAAQAEAAIAAAAaAAMAAQAFAAIAAAAaAAIAAQAKAAAAAAAZAA0AAQAJAAMAAAAZAAwAAQAKAAAAAAAZAAoAAQAJAAMAAAAZAAkAAQAMAAEAAAAZAAgAAQANAAIAAAAZAAcAAQAKAAAAAAAZAAMAAQAJAAMAAAAZAAIAAQAKAAAAAAAYAA0AAQAJAAMAAAAYAAwAAQAKAAAAAAAYAAoAAQAJAAMAAAAYAAkAAQAMAAEAAAAYAAgAAQAMAAAAAAAYAAcAAQAJAAAAAAAYAAMAAQAKAAMAAAAYAAIAAQAKAAAAAAAXAA0AAQAJAAMAAAAXAAwAAQAKAAAAAAAXAAoAAQAJAAMAAAAXAAkAAQAMAAAAAAAXAAgAAQANAAIAAAAXAAcAAQAKAAAAAAAXAAMAAQAJAAMAAAAXAAIAAQAKAAAAAAAWAA8AAQALAAMAAAAWAA4AAQALAAIAAAAWAA0AAQAGAAIAAAAWAAwAAQAGAAEAAAAWAAsAAQALAAIAAAAWAAoAAQAGAAIAAAAWAAkAAQAMAAIAAAAWAAgAAQANAAIAAAAWAAcAAQAGAAEAAAAWAAYAAQALAAIAAAAWAAUAAQALAAIAAAAWAAQAAQALAAIAAAAWAAMAAQAGAAIAAAAWAAIAAQAKAAAAAAAVAA8AAQAIAAMAAAAVAA4AAQAIAAEAAAAVAA0AAQAFAAIAAAAVAAwAAQANAAIAAAAVAAsAAQANAAIAAAAVAAoAAQAMAAIAAAAVAAkAAQAMAAAAAAAVAAgAAQAMAAAAAAAVAAcAAQANAAEAAAAVAAYAAQAMAAIAAAAVAAUAAQAMAAAAAAAVAAQAAQAMAAAAAAAVAAMAAQANAAEAAAAVAAIAAQAKAAAAAAAUAA0AAQAIAAMAAAAUAAwAAQAFAAIAAAAUAAsAAQAMAAEAAAAUAAoAAQAMAAIAAAAUAAkAAQAMAAEAAAAUAAgAAQANAAIAAAAUAAcAAQAMAAIAAAAUAAYAAQAMAAEAAAAUAAUAAQAMAAAAAAAUAAQAAQAMAAAAAAAUAAMAAQAMAAEAAAAUAAIAAQAKAAAAAAATAAwAAQAIAAMAAAATAAsAAQAFAAIAAAATAAoAAQAMAAIAAAATAAkAAQAMAAEAAAATAAgAAQANAAEAAAATAAcAAQAMAAIAAAATAAYAAQAMAAEAAAATAAUAAQAMAAEAAAATAAQAAQAFAAEAAAATAAMAAQAIAAEAAAATAAIAAQAIAAAAAAASAAsAAQANAAIAAAASAAoAAQANAAEAAAASAAkAAQAMAAIAAAASAAgAAQAMAAAAAAASAAcAAQAMAAIAAAASAAYAAQANAAIAAAASAAUAAQAMAAAAAAASAAQAAQAKAAAAAAARAAsAAQANAAIAAAARAAoAAQANAAEAAAARAAkAAQANAAEAAAARAAgAAQAMAAIAAAARAAcAAQAMAAEAAAARAAYAAQAMAAIAAAARAAUAAQAMAAEAAAARAAQAAQAGAAEAAAARAAMAAQALAAIAAAARAAIAAQALAAAAAAAQAAwAAQALAAMAAAAQAAsAAQAGAAIAAAAQAAoAAQAMAAAAAAAQAAkAAQANAAEAAAAQAAgAAQAMAAEAAAAQAAcAAQANAAEAAAAQAAYAAQANAAEAAAAQAAUAAQAMAAEAAAAQAAQAAQAMAAIAAAAQAAMAAQAFAAEAAAAQAAIAAQAIAAAAAAAPAA0AAQALAAMAAAAPAAwAAQAGAAIAAAAPAAsAAQAMAAEAAAAPAAoAAQAMAAEAAAAPAAkAAQANAAEAAAAPAAgAAQAMAAIAAAAPAAcAAQAMAAAAAAAPAAYAAQANAAEAAAAPAAUAAQAMAAAAAAAPAAQAAQAMAAAAAAAPAAMAAQAKAAAAAAAOAA8AAQALAAMAAAAOAA4AAQALAAIAAAAOAA0AAQAGAAIAAAAOAAwAAQAMAAAAAAAOAAsAAQAMAAAAAAAOAAoAAQAMAAAAAAAOAAkAAQAMAAEAAAAOAAgAAQANAAIAAAAOAAcAAQANAAIAAAAOAAYAAQANAAEAAAAOAAUAAQAMAAIAAAAOAAQAAQAMAAIAAAAOAAMAAQAGAAEAAAAOAAIAAQALAAAAAAANAA8AAQAFAAMAAAANAA4AAQAIAAEAAAANAA0AAQAIAAEAAAANAAwAAQAFAAIAAAANAAsAAQAMAAAAAAANAAoAAQANAAEAAAANAAkAAQANAAIAAAANAAgAAQANAAIAAAANAAcAAQAFAAEAAAANAAYAAQAIAAEAAAANAAUAAQAIAAEAAAANAAQAAQAIAAEAAAANAAMAAQAFAAIAAAANAAIAAQAKAAAAAAAMAA8AAQACAAIAAAAMAAwAAQAJAAMAAAAMAAsAAQAFAAEAAAAMAAoAAQAIAAEAAAAMAAkAAQAIAAEAAAAMAAgAAQAFAAIAAAAMAAcAAQAKAAAAAAAMAAMAAQAJAAMAAAAMAAIAAQAKAAAAAAALAA8AAQAGAAMAAAALAA4AAQALAAIAAAALAA0AAQALAAIAAAALAAwAAQAGAAIAAAALAAsAAQAKAAAAAAALAAgAAQAJAAMAAAALAAMAAQAJAAMAAAALAAIAAQAKAAAAAAAKAA8AAQAJAAMAAAAKAA4AAQAMAAAAAAAKAA0AAQAMAAAAAAAKAAwAAQAMAAEAAAAKAAsAAQAKAAAAAAAKAAgAAQAJAAMAAAAKAAUAAQALAAAAAAAKAAMAAQAJAAMAAAAKAAIAAQAKAAAAAAAJAA8AAQAIAAMAAAAJAA4AAQAIAAEAAAAJAA0AAQAIAAEAAAAJAAwAAQAIAAEAAAAJAAsAAQAKAAIAAAAJAAoAAQALAAIAAAAJAAkAAQALAAIAAAAJAAgAAQAJAAEAAAAJAAcAAQAIAAEAAAAJAAYAAQAFAAIAAAAJAAUAAQAGAAEAAAAJAAQAAQALAAIAAAAJAAMAAQAGAAIAAAAJAAIAAQAKAAAAAAAIAAsAAQAJAAMAAAAIAAoAAQANAAEAAAAIAAkAAQAMAAAAAAAIAAgAAQAKAAAAAAAIAAYAAQAJAAMAAAAIAAUAAQAMAAAAAAAIAAQAAQANAAIAAAAIAAMAAQANAAIAAAAIAAIAAQAKAAAAAAAHAA8AAQAAAAIAAAAHAA4AAQAAAAEAAAAHAA0AAQAAAAEAAAAHAAwAAQAAAAEAAAAHAAsAAQAEAAIAAAAHAAoAAQAIAAEAAAAHAAkAAQAIAAEAAAAHAAgAAQAIAAAAAAAHAAYAAQAIAAMAAAAHAAUAAQAIAAEAAAAHAAQAAQAIAAEAAAAHAAMAAQAIAAEAAAAHAAIAAQAIAAAAAAARAAwAAQAMAAMAAAASAAwAAQANAAIAAAAYAAUAAQAAAAEAAAAYAAQAAQAAAAEAAAAYAAYAAQAAAAEAAAAKAAYAAQALAAIAAAALAAcAAQAKAAAAAAAKAAcAAQAGAAEAAAA=")
 tile_set = SubResource("TileSet_3xx61")
 
 [node name="Level" type="Node2D" parent="." unique_id=1948887303]
@@ -791,36 +796,6 @@ navigation_polygon = SubResource("NavigationPolygon_rl4yr")
 [node name="EnemyGroup" type="Node2D" parent="Level" unique_id=1371289860]
 y_sort_enabled = true
 position = Vector2(0, 6)
-
-[node name="Enemy" parent="Level/EnemyGroup" unique_id=34812447 instance=ExtResource("6_00grs")]
-position = Vector2(522, 366)
-
-[node name="Enemy2" parent="Level/EnemyGroup" unique_id=1642942301 instance=ExtResource("6_00grs")]
-position = Vector2(545, 152)
-
-[node name="Enemy3" parent="Level/EnemyGroup" unique_id=1995805179 instance=ExtResource("6_00grs")]
-position = Vector2(782, 407)
-
-[node name="Enemy4" parent="Level/EnemyGroup" unique_id=706837733 instance=ExtResource("6_00grs")]
-position = Vector2(377, 308)
-
-[node name="Enemy5" parent="Level/EnemyGroup" unique_id=947975955 instance=ExtResource("6_00grs")]
-position = Vector2(698, 310)
-
-[node name="Enemy6" parent="Level/EnemyGroup" unique_id=286760367 instance=ExtResource("6_00grs")]
-position = Vector2(426, 199)
-
-[node name="Enemy7" parent="Level/EnemyGroup" unique_id=463305605 instance=ExtResource("6_00grs")]
-position = Vector2(653, 393)
-
-[node name="Enemy8" parent="Level/EnemyGroup" unique_id=1126357411 instance=ExtResource("6_00grs")]
-position = Vector2(365, 415)
-
-[node name="Enemy9" parent="Level/EnemyGroup" unique_id=1689988425 instance=ExtResource("6_00grs")]
-position = Vector2(594, 199)
-
-[node name="Enemy10" parent="Level/EnemyGroup" unique_id=2083352729 instance=ExtResource("6_00grs")]
-position = Vector2(784, 211)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level" unique_id=483935569]
 
@@ -848,5 +823,230 @@ shape = SubResource("RectangleShape2D_8eaxq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitTo2" unique_id=284330140]
 position = Vector2(576, 641)
 shape = SubResource("RectangleShape2D_23ier")
+
+[node name="TreeGroup" type="Node2D" parent="." unique_id=2084056826]
+y_sort_enabled = true
+
+[node name="Tree" parent="TreeGroup" unique_id=1390297600 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(963, 172)
+
+[node name="Tree2" parent="TreeGroup" unique_id=1908417438 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(992, 151)
+
+[node name="Tree3" parent="TreeGroup" unique_id=1736474438 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(978, 272)
+
+[node name="Tree4" parent="TreeGroup" unique_id=1946478273 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(1023, 164)
+
+[node name="Tree5" parent="TreeGroup" unique_id=1147925809 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(1017, 226)
+
+[node name="Tree6" parent="TreeGroup" unique_id=2075271629 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(1018, 341)
+
+[node name="Tree7" parent="TreeGroup" unique_id=375985795 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(961, 248)
+
+[node name="Tree8" parent="TreeGroup" unique_id=2107327774 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(990, 227)
+
+[node name="Tree9" parent="TreeGroup" unique_id=760555613 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(976, 348)
+
+[node name="Tree10" parent="TreeGroup" unique_id=1402305609 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(1021, 240)
+
+[node name="Tree11" parent="TreeGroup" unique_id=198114290 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(1015, 302)
+
+[node name="Tree12" parent="TreeGroup" unique_id=11043101 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(1016, 417)
+
+[node name="Tree13" parent="TreeGroup" unique_id=806429608 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(958, 424)
+
+[node name="Tree14" parent="TreeGroup" unique_id=2145151887 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(987, 403)
+
+[node name="Tree15" parent="TreeGroup" unique_id=1465980874 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(973, 524)
+
+[node name="Tree16" parent="TreeGroup" unique_id=483190721 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(1018, 416)
+
+[node name="Tree17" parent="TreeGroup" unique_id=1604821 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(1012, 478)
+
+[node name="Tree18" parent="TreeGroup" unique_id=593605769 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(1013, 593)
+
+[node name="Tree19" parent="TreeGroup" unique_id=2077060485 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(958, 424)
+
+[node name="Tree20" parent="TreeGroup" unique_id=48619790 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(987, 403)
+
+[node name="Tree21" parent="TreeGroup" unique_id=992079575 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(973, 524)
+
+[node name="Tree22" parent="TreeGroup" unique_id=527062551 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(1018, 416)
+
+[node name="Tree23" parent="TreeGroup" unique_id=1356502462 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(1012, 478)
+
+[node name="Tree24" parent="TreeGroup" unique_id=1146031524 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(1013, 593)
+
+[node name="Tree25" parent="TreeGroup" unique_id=1280212394 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(131, 177)
+
+[node name="Tree26" parent="TreeGroup" unique_id=1557277717 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(160, 156)
+
+[node name="Tree27" parent="TreeGroup" unique_id=1655402271 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(146, 277)
+
+[node name="Tree28" parent="TreeGroup" unique_id=2019039688 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(191, 169)
+
+[node name="Tree29" parent="TreeGroup" unique_id=1288526878 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(185, 231)
+
+[node name="Tree30" parent="TreeGroup" unique_id=1716513171 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(186, 346)
+
+[node name="Tree31" parent="TreeGroup" unique_id=6986477 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(129, 253)
+
+[node name="Tree32" parent="TreeGroup" unique_id=164348697 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(158, 232)
+
+[node name="Tree33" parent="TreeGroup" unique_id=1892052190 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(144, 353)
+
+[node name="Tree34" parent="TreeGroup" unique_id=1365966767 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(189, 245)
+
+[node name="Tree35" parent="TreeGroup" unique_id=815322248 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(183, 307)
+
+[node name="Tree36" parent="TreeGroup" unique_id=416808490 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(184, 422)
+
+[node name="Tree37" parent="TreeGroup" unique_id=723643321 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(126, 429)
+
+[node name="Tree38" parent="TreeGroup" unique_id=1207818886 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(155, 408)
+
+[node name="Tree39" parent="TreeGroup" unique_id=1827568104 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(141, 529)
+
+[node name="Tree40" parent="TreeGroup" unique_id=2138127216 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(186, 421)
+
+[node name="Tree41" parent="TreeGroup" unique_id=426558348 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(180, 483)
+
+[node name="Tree42" parent="TreeGroup" unique_id=1334154678 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(181, 598)
+
+[node name="Tree43" parent="TreeGroup" unique_id=857072816 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(126, 429)
+
+[node name="Tree44" parent="TreeGroup" unique_id=1780563963 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(155, 408)
+
+[node name="Tree45" parent="TreeGroup" unique_id=1823841981 instance=ExtResource("7_00grs")]
+y_sort_enabled = true
+position = Vector2(141, 529)
+
+[node name="Tree46" parent="TreeGroup" unique_id=396675746 instance=ExtResource("9_7umsv")]
+y_sort_enabled = true
+position = Vector2(186, 421)
+
+[node name="Tree47" parent="TreeGroup" unique_id=434546034 instance=ExtResource("8_ip2q2")]
+y_sort_enabled = true
+position = Vector2(180, 483)
+
+[node name="Tree48" parent="TreeGroup" unique_id=680701767 instance=ExtResource("10_al6sl")]
+y_sort_enabled = true
+position = Vector2(181, 598)
+
+[node name="Tree49" parent="TreeGroup" unique_id=801210163 instance=ExtResource("8_ip2q2")]
+position = Vector2(316, 603)
+
+[node name="Tree50" parent="TreeGroup" unique_id=2069428123 instance=ExtResource("9_7umsv")]
+position = Vector2(267, 566)
+
+[node name="Tree51" parent="TreeGroup" unique_id=320981880 instance=ExtResource("8_ip2q2")]
+position = Vector2(394, 594)
+
+[node name="Tree52" parent="TreeGroup" unique_id=667967558 instance=ExtResource("10_al6sl")]
+position = Vector2(466, 577)
+
+[node name="Tree53" parent="TreeGroup" unique_id=2103125498 instance=ExtResource("8_ip2q2")]
+position = Vector2(717, 589)
+
+[node name="Tree54" parent="TreeGroup" unique_id=1253712782 instance=ExtResource("7_00grs")]
+position = Vector2(769, 512)
+
+[node name="Tree55" parent="TreeGroup" unique_id=2014925958 instance=ExtResource("7_00grs")]
+position = Vector2(832, 513)
+
+[node name="Tree56" parent="TreeGroup" unique_id=1994475592 instance=ExtResource("9_7umsv")]
+position = Vector2(830, 607)
+
+[node name="Tree57" parent="TreeGroup" unique_id=1045993182 instance=ExtResource("8_ip2q2")]
+position = Vector2(933, 592)
+
+[node name="Tree58" parent="TreeGroup" unique_id=1573216380 instance=ExtResource("11_tfqyp")]
+position = Vector2(895, 622)
 
 [connection signal="body_entered" from="ExitTo2" to="." method="_on_exit_to_2_body_entered"]

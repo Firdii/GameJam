@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://b88flopivhuk0" path="res://Assets/Asset/Level/Tilemap_Platform.png" id="4_1fy47"]
 [ext_resource type="PackedScene" uid="uid://4sulc47mnpoe" path="res://Game/Scene/player.tscn" id="5_f2eq0"]
 [ext_resource type="PackedScene" uid="uid://ditt7ebdj0n1l" path="res://Game/Scene/enemy.tscn" id="6_8fl7h"]
+[ext_resource type="PackedScene" uid="uid://duhuyhkouif18" path="res://Game/Scene/tree1.tscn" id="8_8fl7h"]
+[ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="9_5wytv"]
+[ext_resource type="PackedScene" uid="uid://bw5si1hfbsdq4" path="res://Game/Scene/tree4.tscn" id="10_j0psq"]
+[ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="11_bjfhs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lv82p"]
 texture = ExtResource("1_awdd5")
@@ -791,34 +795,43 @@ y_sort_enabled = true
 position = Vector2(0, 6)
 
 [node name="Enemy" parent="Level/EnemyGroup" unique_id=34812447 instance=ExtResource("6_8fl7h")]
-position = Vector2(522, 366)
+position = Vector2(268, 132)
 
 [node name="Enemy2" parent="Level/EnemyGroup" unique_id=1642942301 instance=ExtResource("6_8fl7h")]
-position = Vector2(545, 152)
+position = Vector2(420, 107)
 
 [node name="Enemy3" parent="Level/EnemyGroup" unique_id=1995805179 instance=ExtResource("6_8fl7h")]
-position = Vector2(782, 407)
+position = Vector2(454, 394)
 
 [node name="Enemy4" parent="Level/EnemyGroup" unique_id=706837733 instance=ExtResource("6_8fl7h")]
-position = Vector2(377, 308)
+position = Vector2(236, 351)
 
 [node name="Enemy5" parent="Level/EnemyGroup" unique_id=947975955 instance=ExtResource("6_8fl7h")]
-position = Vector2(698, 310)
+position = Vector2(762, 356)
 
 [node name="Enemy6" parent="Level/EnemyGroup" unique_id=286760367 instance=ExtResource("6_8fl7h")]
-position = Vector2(426, 199)
+position = Vector2(398, 279)
 
 [node name="Enemy7" parent="Level/EnemyGroup" unique_id=463305605 instance=ExtResource("6_8fl7h")]
 position = Vector2(653, 393)
 
 [node name="Enemy8" parent="Level/EnemyGroup" unique_id=1126357411 instance=ExtResource("6_8fl7h")]
-position = Vector2(365, 415)
+position = Vector2(332, 480)
 
 [node name="Enemy9" parent="Level/EnemyGroup" unique_id=1689988425 instance=ExtResource("6_8fl7h")]
-position = Vector2(594, 199)
+position = Vector2(665, 156)
 
 [node name="Enemy10" parent="Level/EnemyGroup" unique_id=2083352729 instance=ExtResource("6_8fl7h")]
-position = Vector2(784, 211)
+position = Vector2(835, 172)
+
+[node name="Enemy11" parent="Level/EnemyGroup" unique_id=983701252 instance=ExtResource("6_8fl7h")]
+position = Vector2(840, 454)
+
+[node name="Enemy12" parent="Level/EnemyGroup" unique_id=2099487035 instance=ExtResource("6_8fl7h")]
+position = Vector2(781, 543)
+
+[node name="Enemy13" parent="Level/EnemyGroup" unique_id=1271234086 instance=ExtResource("6_8fl7h")]
+position = Vector2(665, 461)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Level" unique_id=483935569]
 
@@ -829,6 +842,234 @@ shape = SubResource("RectangleShape2D_g5pn2")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/StaticBody2D" unique_id=1473706086]
 position = Vector2(1102, 330)
 shape = SubResource("RectangleShape2D_g5pn2")
+
+[node name="TreeGroup" type="Node2D" parent="Level" unique_id=1844675861]
+y_sort_enabled = true
+
+[node name="Tree" parent="Level/TreeGroup" unique_id=1390297600 instance=ExtResource("8_8fl7h")]
+position = Vector2(238, 139)
+
+[node name="Tree2" parent="Level/TreeGroup" unique_id=73576950 instance=ExtResource("9_5wytv")]
+position = Vector2(177, 364)
+
+[node name="Tree3" parent="Level/TreeGroup" unique_id=948620354 instance=ExtResource("10_j0psq")]
+position = Vector2(884, 470)
+
+[node name="Tree4" parent="Level/TreeGroup" unique_id=2013582719 instance=ExtResource("11_bjfhs")]
+position = Vector2(590, 286)
+
+[node name="Tree5" parent="Level/TreeGroup" unique_id=1519314902 instance=ExtResource("9_5wytv")]
+position = Vector2(743, 271)
+
+[node name="Tree6" parent="Level/TreeGroup" unique_id=1113229077 instance=ExtResource("11_bjfhs")]
+position = Vector2(289, 518)
+
+[node name="Tree7" parent="Level/TreeGroup" unique_id=162416376 instance=ExtResource("9_5wytv")]
+position = Vector2(517, 436)
+
+[node name="Tree8" parent="Level/TreeGroup" unique_id=1071470485 instance=ExtResource("8_8fl7h")]
+position = Vector2(793, 368)
+
+[node name="Tree9" parent="Level/TreeGroup" unique_id=1473256641 instance=ExtResource("9_5wytv")]
+position = Vector2(423, 270)
+
+[node name="Tree10" parent="Level/TreeGroup" unique_id=216938789 instance=ExtResource("11_bjfhs")]
+position = Vector2(870, 171)
+
+[node name="Tree11" parent="Level/TreeGroup" unique_id=448814768 instance=ExtResource("10_j0psq")]
+position = Vector2(863, 570)
+
+[node name="Tree12" parent="Level/TreeGroup" unique_id=563807283 instance=ExtResource("9_5wytv")]
+position = Vector2(403, 98)
+
+[node name="Tree13" parent="Level/TreeGroup" unique_id=725786280 instance=ExtResource("8_8fl7h")]
+position = Vector2(685, 147)
+
+[node name="Tree14" parent="Level/TreeGroup" unique_id=1383425344 instance=ExtResource("9_5wytv")]
+position = Vector2(1006, 609)
+
+[node name="Tree15" parent="Level/TreeGroup" unique_id=505815650 instance=ExtResource("11_bjfhs")]
+position = Vector2(144, 496)
+
+[node name="Tree16" parent="Level/TreeGroup" unique_id=726078121 instance=ExtResource("10_j0psq")]
+position = Vector2(7, 17)
+
+[node name="Tree17" parent="Level/TreeGroup" unique_id=1578357532 instance=ExtResource("11_bjfhs")]
+position = Vector2(25, 23)
+
+[node name="Tree18" parent="Level/TreeGroup" unique_id=767961206 instance=ExtResource("9_5wytv")]
+position = Vector2(12, 44)
+
+[node name="Tree19" parent="Level/TreeGroup" unique_id=449894842 instance=ExtResource("8_8fl7h")]
+position = Vector2(35, 44)
+
+[node name="Tree20" parent="Level/TreeGroup" unique_id=1496221538 instance=ExtResource("9_5wytv")]
+position = Vector2(9, 55)
+
+[node name="Tree21" parent="Level/TreeGroup" unique_id=1077518128 instance=ExtResource("8_8fl7h")]
+position = Vector2(58, 20)
+
+[node name="Tree22" parent="Level/TreeGroup" unique_id=81294946 instance=ExtResource("11_bjfhs")]
+position = Vector2(61, 50)
+
+[node name="Tree23" parent="Level/TreeGroup" unique_id=1732814110 instance=ExtResource("9_5wytv")]
+position = Vector2(66, 87)
+
+[node name="Tree24" parent="Level/TreeGroup" unique_id=2078150969 instance=ExtResource("11_bjfhs")]
+position = Vector2(26, 77)
+
+[node name="Tree25" parent="Level/TreeGroup" unique_id=1022240731 instance=ExtResource("9_5wytv")]
+position = Vector2(27, 113)
+
+[node name="Tree26" parent="Level/TreeGroup" unique_id=1550982196 instance=ExtResource("8_8fl7h")]
+position = Vector2(74, 128)
+
+[node name="Tree27" parent="Level/TreeGroup" unique_id=1562028781 instance=ExtResource("9_5wytv")]
+position = Vector2(29, 159)
+
+[node name="Tree28" parent="Level/TreeGroup" unique_id=1367032369 instance=ExtResource("11_bjfhs")]
+position = Vector2(20, 199)
+
+[node name="Tree29" parent="Level/TreeGroup" unique_id=1592063705 instance=ExtResource("10_j0psq")]
+position = Vector2(77, 170)
+
+[node name="Tree30" parent="Level/TreeGroup" unique_id=1764290829 instance=ExtResource("9_5wytv")]
+position = Vector2(62, 219)
+
+[node name="Tree31" parent="Level/TreeGroup" unique_id=1542443916 instance=ExtResource("8_8fl7h")]
+position = Vector2(78, 255)
+
+[node name="Tree32" parent="Level/TreeGroup" unique_id=2107579248 instance=ExtResource("9_5wytv")]
+position = Vector2(47, 253)
+
+[node name="Tree33" parent="Level/TreeGroup" unique_id=321560253 instance=ExtResource("11_bjfhs")]
+position = Vector2(58, 318)
+
+[node name="Tree34" parent="Level/TreeGroup" unique_id=76328218 instance=ExtResource("10_j0psq")]
+position = Vector2(85, 370)
+
+[node name="Tree35" parent="Level/TreeGroup" unique_id=1166028055 instance=ExtResource("9_5wytv")]
+position = Vector2(17, 324)
+
+[node name="Tree36" parent="Level/TreeGroup" unique_id=2091560595 instance=ExtResource("8_8fl7h")]
+position = Vector2(19, 428)
+
+[node name="Tree37" parent="Level/TreeGroup" unique_id=1377962758 instance=ExtResource("9_5wytv")]
+position = Vector2(66, 393)
+
+[node name="Tree38" parent="Level/TreeGroup" unique_id=1225268556 instance=ExtResource("11_bjfhs")]
+position = Vector2(22, 349)
+
+[node name="Tree39" parent="Level/TreeGroup" unique_id=1148670784 instance=ExtResource("10_j0psq")]
+position = Vector2(76, 435)
+
+[node name="Tree40" parent="Level/TreeGroup" unique_id=2146070348 instance=ExtResource("9_5wytv")]
+position = Vector2(37, 446)
+
+[node name="Tree41" parent="Level/TreeGroup" unique_id=1589739763 instance=ExtResource("8_8fl7h")]
+position = Vector2(84, 483)
+
+[node name="Tree42" parent="Level/TreeGroup" unique_id=365279702 instance=ExtResource("9_5wytv")]
+position = Vector2(34, 497)
+
+[node name="Tree43" parent="Level/TreeGroup" unique_id=1369254227 instance=ExtResource("11_bjfhs")]
+position = Vector2(84, 519)
+
+[node name="Tree44" parent="Level/TreeGroup" unique_id=1890346789 instance=ExtResource("10_j0psq")]
+position = Vector2(14, 554)
+
+[node name="Tree45" parent="Level/TreeGroup" unique_id=329062168 instance=ExtResource("9_5wytv")]
+position = Vector2(58, 556)
+
+[node name="Tree46" parent="Level/TreeGroup" unique_id=717005264 instance=ExtResource("8_8fl7h")]
+position = Vector2(27, 598)
+
+[node name="Tree47" parent="Level/TreeGroup" unique_id=1309526145 instance=ExtResource("11_bjfhs")]
+position = Vector2(74, 608)
+
+[node name="Tree48" parent="Level/TreeGroup" unique_id=492957024 instance=ExtResource("9_5wytv")]
+position = Vector2(9, 640)
+
+[node name="Tree49" parent="Level/TreeGroup" unique_id=1822747511 instance=ExtResource("8_8fl7h")]
+position = Vector2(71, 629)
+
+[node name="Tree50" parent="Level/TreeGroup" unique_id=1199899371 instance=ExtResource("9_5wytv")]
+position = Vector2(1065, 28)
+
+[node name="Tree51" parent="Level/TreeGroup" unique_id=853538213 instance=ExtResource("11_bjfhs")]
+position = Vector2(1100, 35)
+
+[node name="Tree52" parent="Level/TreeGroup" unique_id=1893788526 instance=ExtResource("10_j0psq")]
+position = Vector2(1069, 82)
+
+[node name="Tree53" parent="Level/TreeGroup" unique_id=1528293034 instance=ExtResource("8_8fl7h")]
+position = Vector2(1128, 117)
+
+[node name="Tree54" parent="Level/TreeGroup" unique_id=1352645313 instance=ExtResource("9_5wytv")]
+position = Vector2(1074, 126)
+
+[node name="Tree55" parent="Level/TreeGroup" unique_id=728630530 instance=ExtResource("8_8fl7h")]
+position = Vector2(1121, 159)
+
+[node name="Tree56" parent="Level/TreeGroup" unique_id=1157513257 instance=ExtResource("9_5wytv")]
+position = Vector2(1069, 179)
+
+[node name="Tree57" parent="Level/TreeGroup" unique_id=951120890 instance=ExtResource("11_bjfhs")]
+position = Vector2(1120, 265)
+
+[node name="Tree58" parent="Level/TreeGroup" unique_id=1517511538 instance=ExtResource("10_j0psq")]
+position = Vector2(1076, 217)
+
+[node name="Tree59" parent="Level/TreeGroup" unique_id=194361784 instance=ExtResource("11_bjfhs")]
+position = Vector2(1121, 183)
+
+[node name="Tree60" parent="Level/TreeGroup" unique_id=1591084218 instance=ExtResource("9_5wytv")]
+position = Vector2(1060, 255)
+
+[node name="Tree61" parent="Level/TreeGroup" unique_id=1651360489 instance=ExtResource("8_8fl7h")]
+position = Vector2(1113, 304)
+
+[node name="Tree62" parent="Level/TreeGroup" unique_id=1538972987 instance=ExtResource("9_5wytv")]
+position = Vector2(1068, 285)
+
+[node name="Tree63" parent="Level/TreeGroup" unique_id=27602154 instance=ExtResource("11_bjfhs")]
+position = Vector2(1088, 328)
+
+[node name="Tree64" parent="Level/TreeGroup" unique_id=1108360928 instance=ExtResource("9_5wytv")]
+position = Vector2(1156, 393)
+
+[node name="Tree65" parent="Level/TreeGroup" unique_id=1257574499 instance=ExtResource("11_bjfhs")]
+position = Vector2(1069, 363)
+
+[node name="Tree66" parent="Level/TreeGroup" unique_id=1774492485 instance=ExtResource("9_5wytv")]
+position = Vector2(1110, 353)
+
+[node name="Tree67" parent="Level/TreeGroup" unique_id=1271044549 instance=ExtResource("8_8fl7h")]
+position = Vector2(1085, 432)
+
+[node name="Tree68" parent="Level/TreeGroup" unique_id=837022200 instance=ExtResource("11_bjfhs")]
+position = Vector2(1063, 452)
+
+[node name="Tree69" parent="Level/TreeGroup" unique_id=1257856479 instance=ExtResource("9_5wytv")]
+position = Vector2(1059, 507)
+
+[node name="Tree70" parent="Level/TreeGroup" unique_id=1512808019 instance=ExtResource("8_8fl7h")]
+position = Vector2(1079, 548)
+
+[node name="Tree71" parent="Level/TreeGroup" unique_id=691843563 instance=ExtResource("9_5wytv")]
+position = Vector2(1076, 561)
+
+[node name="Tree72" parent="Level/TreeGroup" unique_id=1284864620 instance=ExtResource("11_bjfhs")]
+position = Vector2(1082, 608)
+
+[node name="Tree73" parent="Level/TreeGroup" unique_id=2093837862 instance=ExtResource("10_j0psq")]
+position = Vector2(1110, 461)
+
+[node name="Tree74" parent="Level/TreeGroup" unique_id=789754120 instance=ExtResource("8_8fl7h")]
+position = Vector2(1139, 535)
+
+[node name="Tree75" parent="Level/TreeGroup" unique_id=2000526860 instance=ExtResource("11_bjfhs")]
+position = Vector2(729, 554)
 
 [node name="ExitTo1" type="Area2D" parent="." unique_id=1762167366]
 
