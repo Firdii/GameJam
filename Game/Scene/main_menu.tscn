@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://pq3ptpkl4hda" path="res://Game/Scene/main_menu.gd" id="1_eud1g"]
 [ext_resource type="FontFile" uid="uid://b3kivjbgy1pyv" path="res://Assets/Font/KiwiSoda.ttf" id="2_eud1g"]
 [ext_resource type="Texture2D" uid="uid://b7wqhsmdr5mv7" path="res://Assets/MainMenuBG/Background layers/Layer_0011_0.png" id="3_tev8b"]
-[ext_resource type="Script" uid="uid://dli2o05qmasjx" path="res://Game/Scene/parallax_background.gd" id="3_xox3y"]
+[ext_resource type="Script" path="res://Game/Scene/parallax_background.gd" id="3_xox3y"]
 [ext_resource type="AudioStream" uid="uid://fblauue74feg" path="res://Assets/Music/MainMenuIMPRINT.wav" id="4_muoms"]
 [ext_resource type="Texture2D" uid="uid://b2nvt4g15x75b" path="res://Assets/MainMenuBG/Background layers/Layer_0010_1.png" id="4_xox3y"]
 [ext_resource type="Texture2D" uid="uid://cc2k16ijs1gsj" path="res://Assets/MainMenuBG/Background layers/Layer_0009_2.png" id="5_veekw"]
