@@ -1012,6 +1012,9 @@ size = Vector2(37, 11.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dh3wh"]
 size = Vector2(24, 21.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ik5lm"]
+radius = 2.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1297455864]
 script = ExtResource("1_s7hed")
 showDebugVisual = false
@@ -1073,4 +1076,14 @@ bus = &"Sound"
 stream = ExtResource("23_ll2go")
 bus = &"Sound"
 
+[node name="SfxRun" type="AudioStreamPlayer2D" parent="." unique_id=948130882]
+bus = &"SFX"
+
+[node name="SurfaceDetector" type="Area2D" parent="." unique_id=382097814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SurfaceDetector" unique_id=366812606]
+shape = SubResource("CircleShape2D_ik5lm")
+
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]
+[connection signal="area_entered" from="SurfaceDetector" to="." method="_on_surface_detector_area_entered"]
+[connection signal="area_exited" from="SurfaceDetector" to="." method="_on_surface_detector_area_exited"]
