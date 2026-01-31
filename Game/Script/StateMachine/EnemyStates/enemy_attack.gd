@@ -2,7 +2,7 @@ extends State
 
 func Enter():
 	super.Enter()
-	# 1. Mainin animasi sesuai arah (Attack_Up, dll)
+	
 	character.UpdateAnimation()
 	
 	# 2. Kasih damage (Slime: 0.5 Heart, Boss: 1 Heart)

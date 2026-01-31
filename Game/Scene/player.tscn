@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://cqyjjhqy7lwhb" path="res://Assets/Asset/FREE_Adventurer 2D Pixel Art/Sprites/RUN/run_up.png" id="17_ll2go"]
 [ext_resource type="AudioStream" uid="uid://yvep5ilrnhcg" path="res://Assets/Sounds/Slash1.wav" id="22_ik5lm"]
 [ext_resource type="AudioStream" uid="uid://cw4r8sf801tq3" path="res://Assets/Sounds/Slash2.wav" id="23_ll2go"]
+[ext_resource type="AudioStream" uid="uid://cnckwubehjb6s" path="res://Assets/Sounds/HurtPlayer.wav" id="24_ll2go"]
+[ext_resource type="Script" uid="uid://bmd04aj2vhxtk" path="res://Game/Scene/h_box_container.gd" id="25_jp00q"]
+[ext_resource type="PackedScene" uid="uid://cgc37jirvfotq" path="res://Game/Scene/heart_gui.tscn" id="26_vaw4t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7hed"]
 radius = 3.0
@@ -1015,11 +1018,10 @@ size = Vector2(24, 21.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ik5lm"]
 radius = 2.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1297455864]
+[node name="Player" type="CharacterBody2D" unique_id=1297455864 groups=["Player"]]
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_s7hed")
-showDebugVisual = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1666067908]
 shape = SubResource("CircleShape2D_s7hed")
@@ -1084,6 +1086,35 @@ bus = &"Sound"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SurfaceDetector" unique_id=366812606]
 shape = SubResource("CircleShape2D_ik5lm")
+
+[node name="SfxHurt" type="AudioStreamPlayer2D" parent="." unique_id=115756555]
+stream = ExtResource("24_ll2go")
+bus = &"SFX"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=768469914]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=127770094]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1823116937]
+layout_mode = 2
+theme_override_constants/separation = 10
+script = ExtResource("25_jp00q")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=188980433]
+layout_mode = 2
+
+[node name="heart_gui" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=1692714266 instance=ExtResource("26_vaw4t")]
+position = Vector2(2, -2)
+
+[node name="heart_gui2" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=1760242917 instance=ExtResource("26_vaw4t")]
+position = Vector2(33, -2)
+
+[node name="heart_gui3" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=896038989 instance=ExtResource("26_vaw4t")]
+position = Vector2(64, -2)
 
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]
 [connection signal="area_entered" from="SurfaceDetector" to="." method="_on_surface_detector_area_entered"]

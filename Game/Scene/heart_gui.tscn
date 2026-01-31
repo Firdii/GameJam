@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgc37jirvfotq"]
+
+[ext_resource type="Texture2D" uid="uid://b0wul0q47wgsq" path="res://Assets/Asset/VFX/heart-2dec.png" id="1_3obn6"]
+
+[node name="heart_gui" type="Node2D" unique_id=1692714266]
+
+[node name="Control" type="Control" parent="." unique_id=1763480624 groups=["gui_heart"]]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=2010827395]
+position = Vector2(16, 16)
+texture = ExtResource("1_3obn6")
+hframes = 3

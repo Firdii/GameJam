@@ -7,10 +7,10 @@ var speed : float
 const SPEED_MAX = 50
 const SPEED_MIN = 25
 
-# Setup suara & jarak serang
+
 var jump_timer : float = 0.0
 @export var jump_interval : float = 0.6
-@export var attack_range : float = 10.0 # Sesuaikan jarak serang di sini
+@export var attack_range : float = 10.0 
 
 func Update():
 	super.Update()
@@ -20,10 +20,10 @@ func Update():
 	if character.player:
 		navigation_agent_2d.target_position = character.player.global_position
 		
-		# --- CEK JARAK BUAT ATTACK ---
+		
 		var dist = character.global_position.distance_to(character.player.global_position)
 		if dist <= attack_range:
-			parentStateMachine.SwitchTo("Attack") # PINDAH KE ATTACK!
+			parentStateMachine.SwitchTo("Attack") 
 
 func UpdatePhysics(delta: float):
 	super.UpdatePhysics(delta)
@@ -35,7 +35,7 @@ func UpdatePhysics(delta: float):
 		character.velocity = character.velocity.lerp(direction * speed, delta)
 		character.move_and_slide()
 		
-		# Suara boing
+		
 		jump_timer -= delta
 		if jump_timer <= 0:
 			character.play_jump_sfx()
