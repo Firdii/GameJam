@@ -13,5 +13,6 @@ offset_bottom = 40.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=2010827395]
 position = Vector2(16, 16)
+scale = Vector2(2, 2)
 texture = ExtResource("1_3obn6")
 hframes = 3

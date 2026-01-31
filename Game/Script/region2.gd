@@ -8,5 +8,5 @@ func _on_exit_to_1_body_entered(body: Node2D) -> void:
 func _on_exit_to_3_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		
-		Global.spawn_position = Vector2(579, 611) # Ganti dengan koordinat pintu Region 3
+		Global.spawn_position = Vector2(579, 611)  
 		get_tree().change_scene_to_file("res://Game/Region3.tscn")

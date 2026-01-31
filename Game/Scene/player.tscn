@@ -1054,7 +1054,6 @@ shape = SubResource("CircleShape2D_ik5lm")
 
 [node name="SfxHurt" type="AudioStreamPlayer2D" parent="." unique_id=115756555]
 stream = ExtResource("24_ll2go")
-bus = &"hurtSFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=768469914]
 
@@ -1066,7 +1065,7 @@ theme_override_constants/margin_top = 20
 
 [node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=1823116937]
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
 script = ExtResource("25_jp00q")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=188980433]
@@ -1076,10 +1075,10 @@ layout_mode = 2
 position = Vector2(2, -2)
 
 [node name="heart_gui2" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=1760242917 instance=ExtResource("26_vaw4t")]
-position = Vector2(33, -2)
+position = Vector2(58, -2)
 
 [node name="heart_gui3" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=896038989 instance=ExtResource("26_vaw4t")]
-position = Vector2(64, -2)
+position = Vector2(115, -2)
 
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]
 [connection signal="area_entered" from="SurfaceDetector" to="." method="_on_surface_detector_area_entered"]

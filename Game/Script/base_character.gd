@@ -62,7 +62,7 @@ func UpdateAnimation():
 			animated_sprite_2d.offset = Vector2(8, 2) 
 		elif direction == "Up":
 			# Fix teleport kanan (Kita tarik ke kiri pake -4)
-			animated_sprite_2d.offset = Vector2(-4, -4)
+			animated_sprite_2d.offset = Vector2(-10, -10)
 		elif direction == "Left":
 			animated_sprite_2d.offset = Vector2(0, 0)
 		elif direction == "Right":
