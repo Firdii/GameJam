@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://s2j8ms2lg42o"]
+
+[ext_resource type="Script" uid="uid://ufn2e0e237ou" path="res://Game/Script/grass_spawner.gd" id="1_0f8ju"]
+[ext_resource type="PackedScene" uid="uid://uogvweqj1it0" path="res://Game/Scene/grass.tscn" id="2_636ka"]
+
+[node name="GrassSpawner" type="Node2D" unique_id=693333723]
+y_sort_enabled = true
+script = ExtResource("1_0f8ju")
+grass_scene = ExtResource("2_636ka")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=333786870]
+offset_left = 480.0
+offset_right = 663.0
+offset_bottom = 647.0
+border_color = Color(0.32557127, 0.62307626, 0, 1)

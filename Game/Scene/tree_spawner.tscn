@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dv852ojlbwnwa"]
+
+[ext_resource type="Script" uid="uid://nsr1bh7dt8km" path="res://Game/Script/tree_spawner.gd" id="1_4musn"]
+[ext_resource type="PackedScene" uid="uid://duhuyhkouif18" path="res://Game/Scene/tree1.tscn" id="2_wt3ys"]
+[ext_resource type="PackedScene" uid="uid://b1u5huf1rw46x" path="res://Game/Scene/tree2.tscn" id="3_ajfp2"]
+[ext_resource type="PackedScene" uid="uid://dqu7ydq045cvb" path="res://Game/Scene/tree3.tscn" id="4_trpbh"]
+[ext_resource type="PackedScene" uid="uid://bw5si1hfbsdq4" path="res://Game/Scene/tree4.tscn" id="5_0m2to"]
+
+[node name="tree_spawner" type="Node2D" unique_id=339619542]
+script = ExtResource("1_4musn")
+tree_scenes = Array[PackedScene]([ExtResource("2_wt3ys"), ExtResource("3_ajfp2"), ExtResource("4_trpbh"), ExtResource("5_0m2to")])
+amount = 30
+
+[node name="ReferenceRect" type="ReferenceRect" parent="." unique_id=491266972]
+offset_left = 2.0
+offset_right = 1153.0
+offset_bottom = 650.0
+scale = Vector2(1.0009878, 1.0072163)
+border_color = Color(0.7985586, 0.42048797, 0, 1)
+border_width = 5.0

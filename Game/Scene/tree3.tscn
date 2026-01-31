@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqu7ydq045cvb"]
+
+[ext_resource type="Texture2D" uid="uid://b5w7up6n5eo35" path="res://Assets/Asset/Level/TreeAndGrass.png" id="1_832yv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xeqp7"]
+radius = 7.071068
+
+[node name="Tree" type="Node2D" unique_id=1390297600]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=794445570]
+
+[node name="TreeAndGrass" type="Sprite2D" parent="StaticBody2D" unique_id=797332748]
+position = Vector2(0, 2)
+texture = ExtResource("1_832yv")
+offset = Vector2(0, -40)
+region_enabled = true
+region_rect = Rect2(241, -2, 63, 98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=595514242]
+shape = SubResource("CircleShape2D_xeqp7")
