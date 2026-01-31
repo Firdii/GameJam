@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j7vtmti3qomy"
-path="res://.godot/imported/Slime2_Attack_body.png-b0e7ef8f5b9a567c6c114f8d2ca2bcb3.ctex"
+uid="uid://0pkbr31baues"
+path="res://.godot/imported/run side revs.png-a70a147f4d957e84936bbf6fa0fcc6e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Slime2/Attack/Slime2_Attack_body.png"
-dest_files=["res://.godot/imported/Slime2_Attack_body.png-b0e7ef8f5b9a567c6c114f8d2ca2bcb3.ctex"]
+source_file="res://Assets/Asset/RUN/run side revs.png"
+dest_files=["res://.godot/imported/run side revs.png-a70a147f4d957e84936bbf6fa0fcc6e6.ctex"]
 
 [params]
 
