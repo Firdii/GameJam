@@ -27,6 +27,11 @@ buses/default_bus_layout="uid://wxgvavdghjhq"
 
 Music="*uid://ba0ta1uujqppn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [input]
 
 Up={
