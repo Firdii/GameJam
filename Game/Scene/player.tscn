@@ -1017,6 +1017,7 @@ radius = 2.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1297455864]
 y_sort_enabled = true
+collision_layer = 2
 script = ExtResource("1_s7hed")
 showDebugVisual = false
 
@@ -1078,7 +1079,6 @@ stream = ExtResource("23_ll2go")
 bus = &"Sound"
 
 [node name="SfxRun" type="AudioStreamPlayer2D" parent="." unique_id=948130882]
-bus = &"SFX"
 
 [node name="SurfaceDetector" type="Area2D" parent="." unique_id=382097814]
 
