@@ -1253,7 +1253,7 @@ y_sort_enabled = true
 scale = Vector2(5, 5)
 collision_layer = 3
 script = ExtResource("1_6ck22")
-maxHealth = 1
+maxHealth = 16
 attackDamage = 4
 showDebugVisual = false
 
