@@ -2126,7 +2126,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 script = ExtResource("25_jp00q")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=188980433]
+[node name="MaskTextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=188980433 groups=["PlayerUI"]]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -2143,6 +2143,20 @@ position = Vector2(141, 19)
 
 [node name="heart_gui3" parent="CanvasLayer/MarginContainer/HeartContainer" unique_id=896038989 instance=ExtResource("26_vaw4t")]
 position = Vector2(198, 19)
+
+[node name="NotificationLabel" type="Label" parent="CanvasLayer" unique_id=1466838319]
+unique_name_in_owner = true
+modulate = Color(0.83996177, 0.84605426, 0.8317719, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -169.0
+offset_top = 182.0
+offset_right = 170.0
+offset_bottom = 205.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.45490196)
+text = "You feel something strange with your mask"
 
 [connection signal="area_entered" from="AttackHitBox" to="StateMachine/Attack" method="_on_attack_hit_box_area_entered"]
 [connection signal="area_entered" from="SurfaceDetector" to="." method="_on_surface_detector_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://canthxn4s16mi"]
+[gd_scene format=3 uid="uid://d0smmrj1vt148"]
 
 [ext_resource type="Script" uid="uid://d6m432ngniaf" path="res://Game/Script/enemy.gd" id="1_6ck22"]
 [ext_resource type="Shader" uid="uid://c5pfbf5yvkwm4" path="res://Game/Shader/character.tres" id="2_y78rc"]
@@ -17,7 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://088d87g3tw7j" path="res://Assets/Sounds/SlimeJump.wav" id="15_4808y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s7hed"]
-radius = 8.20975
+radius = 9.4
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bqbao"]
 shader = ExtResource("2_y78rc")
@@ -1248,16 +1248,17 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_w6u1f"]
 radius = 7.7999997
 
-[node name="Boss" type="CharacterBody2D" unique_id=983701252]
+[node name="Boss" type="CharacterBody2D" unique_id=983701252 groups=["Boss"]]
 y_sort_enabled = true
 scale = Vector2(5, 5)
 collision_layer = 3
 script = ExtResource("1_6ck22")
-maxHealth = 16
+maxHealth = 1
 attackDamage = 4
 showDebugVisual = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1441194112]
+position = Vector2(1.4901161e-08, -1.2)
 shape = SubResource("CircleShape2D_s7hed")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=305880441]
@@ -1279,6 +1280,7 @@ script = ExtResource("10_0tees")
 
 [node name="Move" type="Node" parent="StateMachine" unique_id=2119795045]
 script = ExtResource("11_jyaud")
+jump_interval = 0.8
 
 [node name="Hurt" type="Node" parent="StateMachine" unique_id=167666052]
 script = ExtResource("12_1p34m")
@@ -1313,6 +1315,7 @@ bus = &"Sound"
 
 [node name="SfxJump" type="AudioStreamPlayer2D" parent="." unique_id=849888967]
 stream = ExtResource("15_4808y")
+pitch_scale = 0.5
 bus = &"SFX"
 
 [connection signal="velocity_computed" from="NavigationAgent2D" to="StateMachine/Move" method="_on_navigation_agent_2d_velocity_computed"]
