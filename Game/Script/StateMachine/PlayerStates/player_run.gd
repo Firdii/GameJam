@@ -3,9 +3,9 @@ extends State
 const SPEED = 120
 const ACCELERATE = 5
 
-# --- SETUP TIMER SUARA ---
+
 var footstep_timer : float = 0.0
-@export var footstep_delay : float = 0.25 # Atur angka ini (0.3 - 0.4 biasanya pas)
+@export var footstep_delay : float = 0.25 
 
 func UpdatePhysics(delta: float):
 	super.UpdatePhysics(delta)
@@ -13,14 +13,12 @@ func UpdatePhysics(delta: float):
 	character.velocity = character.velocity.lerp(character.inputDirection * SPEED, ACCELERATE * delta)
 	character.move_and_slide()
 	
-	# LOGIKA SUARA KAKI PAKE TIMER
 	if character.velocity.length() > 10:
 		footstep_timer -= delta
 		if footstep_timer <= 0:
 			character.play_footstep()
-			footstep_timer = footstep_delay # Reset jeda suara
+			footstep_timer = footstep_delay 
 	else:
-		# Reset timer kalau berhenti, supaya pas jalan lagi langsung bunyi
 		footstep_timer = 0 
 	
 func Update():

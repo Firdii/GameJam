@@ -9,26 +9,22 @@ func _ready() -> void:
 		update_hearts(player.currentHealth, player.maxHealth)
 
 func update_hearts(current: int, _max: int):
-	var all_nodes = get_children() # Isinya: [Topeng, Heart1, Heart2, Heart3]
+	var all_nodes = get_children() 
 	
-	# Kita buat list baru buat nyimpen yang beneran Jantung
 	var heart_nodes = []
 	
 	for node in all_nodes:
-		# Kita skip node yang namanya mengandung "Mask" atau "Topeng" 
-		# Atau gampangnya: skip node yang tipenya TextureRect
 		if not node is TextureRect:
 			heart_nodes.append(node)
 	
-	# Sekarang kita atur frame-nya
 	for i in range(heart_nodes.size()):
 		var sprite = heart_nodes[i].find_child("Sprite2D", true)
 		if sprite:
 			var heart_value = (i + 1) * 2
 			
 			if current >= heart_value:
-				sprite.frame = 0 # FULL
+				sprite.frame = 0 
 			elif current == heart_value - 1:
-				sprite.frame = 1 # HALF
+				sprite.frame = 1 
 			else:
-				sprite.frame = 2 # EMPTY
+				sprite.frame = 2 

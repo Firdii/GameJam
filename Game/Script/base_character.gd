@@ -1,10 +1,10 @@
 extends CharacterBody2D
 class_name BaseCharacter
 
-# --- SIGNAL UNTUK HEART UI ---
+
 signal health_changed(current, max)
 
-# --- STATS ---
+
 @export var maxHealth: int = 6 
 @onready var currentHealth: int = maxHealth:
 	set(value):
@@ -16,7 +16,7 @@ signal health_changed(current, max)
 var isDead: bool = false
 @export var attackDamage: int = 1 
 
-# --- MOVEMENT & UI ---
+
 var knockBackDirection : Vector2
 var inputDirection: Vector2 = Vector2.ZERO
 var facingDirection: String = "Down"
@@ -52,16 +52,14 @@ func UpdateAnimation():
 	var state_name = state_machine.currentState.name
 	var anim_name = state_name + "_" + direction
 	
-	# 1. Reset ke nol dulu biar gak numpuk geserannya
+
 	animated_sprite_2d.offset = Vector2.ZERO
 	
-	# 2. EKSEKUSI GESER MANUAL (Tuning di sini!)
+
 	if state_name == "Run":
 		if direction == "Down":
-			# Fix teleport kiri
 			animated_sprite_2d.offset = Vector2(8, 2) 
 		elif direction == "Up":
-			# Fix teleport kanan (Kita tarik ke kiri pake -4)
 			animated_sprite_2d.offset = Vector2(-12, -12)
 		elif direction == "Left":
 			animated_sprite_2d.offset = Vector2(0, 0)
@@ -69,17 +67,16 @@ func UpdateAnimation():
 			animated_sprite_2d.offset = Vector2(0, 0)
 	
 	elif state_name == "Idle":
-		# Kalau Idle melenceng juga, tuning di sini:
 		if direction == "Down":
 			animated_sprite_2d.offset = Vector2(0, 0)
 		else:
 			animated_sprite_2d.offset = Vector2(0, 0)
 
-	# 3. Jalankan animasinya
+
 	if animated_sprite_2d.sprite_frames.has_animation(anim_name):
 		animated_sprite_2d.play(anim_name)
 
-# --- FUNGSI HURT / KENA HIT ---
+
 func GetHit(damage: int, fromPoint = Vector2.ZERO):
 	if isDead or is_invincible:
 		return
@@ -99,7 +96,7 @@ func GetHit(damage: int, fromPoint = Vector2.ZERO):
 		
 		state_machine.SwitchTo("Hurt")
 
-# --- EFEK VISUAL & I-FRAMES ---
+
 func UpdateBlink(newValue: float):
 	animated_sprite_2d.set_instance_shader_parameter("Blink", newValue)
 	

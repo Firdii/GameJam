@@ -6,9 +6,6 @@ var max_combo = 2
 var next_attack_pressed = false 
 
 @onready var attack_hit_box: Area2D = $"../../AttackHitBox"
-
-# --- REFERENSI SFX ---
-# Pastikan nama node di scene player sama persis dengan nama ini
 @onready var sfx_slash_1 = $"../../SfxSlash1"
 @onready var sfx_slash_2 = $"../../SfxSlash2"
 
@@ -18,8 +15,6 @@ func Enter():
 	super.Enter()
 	is_attacking = true
 	
-	# --- LOGIKA PLAY SUARA BERDASARKAN COMBO ---
-	# Kita play suara tepat saat animasi dimulai di fungsi Enter
 	if combo_count == 1:
 		if sfx_slash_1:
 			sfx_slash_1.pitch_scale = randf_range(0.9, 1.1) # Variasi dikit biar keren
@@ -29,7 +24,6 @@ func Enter():
 			sfx_slash_2.pitch_scale = randf_range(0.9, 1.1)
 			sfx_slash_2.play()
 	
-	# Mainkan animasi sesuai hit combo dan arah hadap karakter
 	var anim_name = "Attack" + str(combo_count) + "_" + character.GetDirectionName()
 	character.animated_sprite_2d.play(anim_name)
 	
@@ -44,12 +38,10 @@ func Enter():
 
 	next_attack_pressed = false
 	
-	# Connect signal kalau belum terhubung biar gak numpuk
 	if not character.animated_sprite_2d.animation_finished.is_connected(_on_animation_finished):
 		character.animated_sprite_2d.animation_finished.connect(_on_animation_finished)
 
 func Update():
-	# Cek input buat lanjutin combo
 	if Input.is_action_just_pressed("Attack"):
 		next_attack_pressed = true
 		
